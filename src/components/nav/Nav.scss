@@ -1,0 +1,29 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 159, 58, 0.589);
+    box-shadow: 0 0 30px black;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    font-family: "Distant Galaxy";
+    letter-spacing: 0.1rem;
+    font-size: 5vh;
+    color: white;
+    padding: 0px 1% 0px 1%;
+}
+
+.navsx {
+    display: flex;
+    align-items: center;
+}
+
+.fullstackdeveloper {
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(55, 255, 0);
+    font-size: 3vh;
+}

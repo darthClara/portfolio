@@ -1,0 +1,25 @@
+.bottonevolume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: black;
+    border: 1px solid rgb(55, 255, 0);
+    box-shadow: 0 0 10px black;
+}
+
+.novolume {
+    width: 15px;
+    height: 15px;
+    background-image: url(./novolume.ico);
+    background-size: cover;
+}
+
+.yesvolume {
+    width: 15px;
+    height: 15px;
+    background-image: url(./yesvolume.ico);
+    background-size: cover;
+}
