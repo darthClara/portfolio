@@ -6,7 +6,7 @@ export default function Nav() {
     return (
         <nav className="nav">
             <div className="navsx">
-                <div>CLARA SCHILLACI</div>
+                <div className="title">CLARA SCHILLACI</div>
                 <div className="fullstackdeveloper">Full Stack Developer</div>
             </div>
             <Music />

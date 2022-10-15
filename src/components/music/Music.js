@@ -5,7 +5,7 @@ import useSound from 'use-sound';
 
 export default function Music() {
 
-    const [play, { stop }] = useSound(music);
+    const [play, { stop }] = useSound(music, {volume: 0.30});
     const [isOff, setIsOff] = useState(true);
     const toplay = () => play();
     const tostop = () => stop();

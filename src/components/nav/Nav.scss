@@ -16,6 +16,13 @@
     padding: 0px 1% 0px 1%;
 }
 
+.title {
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+}
+
 .navsx {
     display: flex;
     align-items: center;
@@ -26,4 +33,8 @@
     font-family: 'Courier New', Courier, monospace;
     color: rgb(55, 255, 0);
     font-size: 3vh;
+    text-shadow:
+    0 0 7px rgb(55, 255, 0),
+    0 0 10px rgb(55, 255, 0),
+    0 0 21px rgb(55, 255, 0),
 }
