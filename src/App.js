@@ -2,7 +2,8 @@ import React from 'react';
 import './App.scss';
 import Nav from './components/nav/Nav';
 import Jedi from './components/jedi/Jedi';
-import Scrollbar from './components/sabersound/Scrollbar';
+import Scrollbar from './components/scrollsound/Scrollsound';
+import Navbar from './components/sidebar/Sidebar';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <Nav/>
         <Jedi/>
         <Scrollbar/>
+        <Navbar />
     </div>
   );
 }
