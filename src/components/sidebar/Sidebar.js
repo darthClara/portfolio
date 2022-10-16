@@ -7,7 +7,7 @@ import './Sidebar.scss';
 import { IconContext } from 'react-icons';
 import sidebarsound from "./sidebarsound.mp3";
 import useSound from 'use-sound';
-// import click from "./click.wav"
+import sidebarsound2 from "./sidebarsound2.wav"
 import click2 from "./click2.wav"
 import closesound from "./sidebarclosesound.mp3"
 
@@ -18,29 +18,45 @@ export default function Navbar() {
     const [play] = useSound(sidebarsound, { volume: 0.30 });
     const [play2] = useSound(click2, { volume: 0.30 });
     const [play3] = useSound(closesound, { volume: 0.80 });
+    const [play4] = useSound(sidebarsound2, { volume: 0.80 });
 
     const [navbaropenbtn, setNavbaropenbtn] = useState(false);
-    const clickNavbaropenbtn = () => setNavbaropenbtn(!navbaropenbtn);
+    const overNavbaropenbtn = () => setNavbaropenbtn(!navbaropenbtn);
+    const tochange = () => setNavbaropenbtn(!navbaropenbtn);
 
-    function gestoreClick() {
+    const [menuicon, setMenuicon] = useState(false);
+    const menuiconactive = () => setMenuicon(!menuicon);
+
+    function gestoreClickopennav() {
         showSidebar();
         play();
-        clickNavbaropenbtn();
+    }
+
+    function gestoreclickmouseenternav() {
+        overNavbaropenbtn();
+        menuiconactive();
+        play4();
+    }
+
+    function gestoreleavenav() {
+        tochange();
+        menuiconactive();
     }
 
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
                 <div className={navbaropenbtn ? 'navbar active' : 'navbar'}>
-                    <Link to='#' className='menu-bars'>
-                        <FaIcons.FaGalacticRepublic onClick={gestoreClick} />
+                    <div className={navbaropenbtn ? 'scritta active' : 'scritta'}>APRI IL MENÙ</div>
+                    <Link to='#' className='menulink'>
+                        <FaIcons.FaGalacticRepublic className={menuicon ? 'menuicon active' : 'menuicon'} onMouseEnter={gestoreclickmouseenternav} onMouseLeave={gestoreleavenav} onClick={gestoreClickopennav} />
                     </Link>
                 </div>
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                     <div className="sfondo">
                         <ul className='nav-menu-items' onClick={showSidebar}>
                             <li className='navbar-toggle'>
-                                <Link to='#' className='menu-bars' onClick={play3}>
+                                <Link to='#' className='menulink' onClick={play3}>
                                     <AiIcons.AiOutlineClose />
                                 </Link>
                             </li>
