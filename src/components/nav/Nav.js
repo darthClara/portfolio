@@ -10,6 +10,9 @@ export default function Nav() {
                 <div className="title">CLARA SCHILLACI</div>
                 <div className="fullstackdeveloper">Full Stack Developer</div>
             </div>
+            <div className="matrixWrapper">
+
+            </div>
             <Music />
         </nav>
     );
