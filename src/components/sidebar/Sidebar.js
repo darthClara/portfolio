@@ -10,6 +10,7 @@ import useSound from 'use-sound';
 import sidebarsound2 from "./sidebarsound2.wav"
 import click2 from "./click2.wav"
 import closesound from "./sidebarclosesound.mp3"
+import Matrix from './Matrix';
 
 
 export default function Navbar() {
@@ -53,6 +54,8 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                    <Matrix>
+                    </Matrix>
                     <div className="sfondo">
                         <ul className='nav-menu-items' onClick={showSidebar}>
                             <li className='navbar-toggle'>
