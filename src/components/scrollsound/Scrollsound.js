@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import sabersound1 from "./sabersound1.mp3";
 import sabersound2 from "./sabersound2.mp3";
 import useSound from 'use-sound';
