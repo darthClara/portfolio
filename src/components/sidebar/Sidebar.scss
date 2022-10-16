@@ -1,19 +1,29 @@
 .navbar {
-    height: 80px;
+    height: 8vh;
+    width: 6vw;
     display: flex;
     justify-content: start;
     align-items: center;
+    background-color: rgba(0, 159, 58, 0.589);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    position: fixed;
+    left: 0;
+    top: 12vh;
   }
   
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
+    position: fixed;
+    top: 13vh;
+    left: 10;
   }
   
   .nav-menu {
     background-color: rgba(0, 159, 58, 0.589);
-    box-shadow: 0 0 30px black;
+    box-shadow: 0 0 15px rgba(55, 255, 0, 0.72);
     width: 450px;
     height: calc(100% - 10vh);
     display: flex;
@@ -72,6 +82,13 @@
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(55, 255, 0);
+    font-size: 5vh;
+    text-shadow:
+    0 0 7px rgb(55, 255, 0),
+    0 0 10px rgb(55, 255, 0),
+    0 0 21px rgb(55, 255, 0),
   }
   
   .nav-text a {
@@ -110,3 +127,5 @@
   span {
     margin-left: 16px;
   }
+
+  

@@ -15,21 +15,25 @@ import closesound from "./sidebarclosesound.mp3"
 export default function Navbar() {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
-    const [play] = useSound(sidebarsound, {volume: 0.30});
-    const [play2] = useSound(click2, {volume: 0.30});
-    const [play3] = useSound(closesound, {volume: 0.80});
+    const [play] = useSound(sidebarsound, { volume: 0.30 });
+    const [play2] = useSound(click2, { volume: 0.30 });
+    const [play3] = useSound(closesound, { volume: 0.80 });
+
+    const [navbaropenbtn, setNavbaropenbtn] = useState(false);
+    const clickNavbaropenbtn = () => setNavbaropenbtn(!navbaropenbtn);
 
     function gestoreClick() {
         showSidebar();
         play();
+        clickNavbaropenbtn();
     }
 
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
-                <div className='navbar'>
+                <div className={navbaropenbtn ? 'navbar active' : 'navbar'}>
                     <Link to='#' className='menu-bars'>
-                        <FaIcons.FaBars onClick={gestoreClick} />
+                        <FaIcons.FaGalacticRepublic onClick={gestoreClick} />
                     </Link>
                 </div>
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
